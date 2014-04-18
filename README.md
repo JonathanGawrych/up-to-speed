@@ -22,6 +22,7 @@ chromium-browser, light-themes, dmz-cursor-theme, nautilus-open-terminal, n, bas
 
 **Configurations:**  
 Changes theme to ambiance  
+Adds default .jshintrc to the home directory (from this repo)
 Show 12h AM/PM clock at the top bar (including day abbreviation, date, seconds)  
 Add minimize and maximize back  
 Allows workspaces on multiple monitors  
@@ -37,7 +38,6 @@ All servers (tomcat, nginx, etc.)
 All sublime packages (excluding package control)  
 Development environments (python, c, c++, etc, excluding Java)  
 LESS configuration  
-Jshint preferences  
 Create ssh key  
 Interactive configuration  
 Remove dumb amd watermark (not applicable to all machines)  
