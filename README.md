@@ -12,13 +12,33 @@ http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04
 Please don't make your commits under my name</div>
 -------------------------------------------
 
-#### What all these commands do:
+###$ What all these commands do:
 **Adds Repositories:**  
-node.js PPA  
-sublime-text PPA  
+ppa:chris-lea/node.js  
+ppa:webupd8team/sublime-text-3  
 
 **Installs:**  
-chromium-browser, light-themes, dmz-cursor-theme, nautilus-open-terminal, n, bash-git-prompt, openjdk-7-jdk, nodejs, sublime-text, git, meld, less, jshint, eclipse, maven, Sublime Package Control
+*(apt-get install)*  
+chromium-browser - Google Chrome without the extras (Flash, PDF, Print-Preview, Google™, Opt-in Usage statistics and Crash reports, AAC, and MP3)  
+light-themes - Ambiance Theme (configured below)  
+dmz-cursor-theme - White Cursor  
+nautilus-open-terminal - Right click -> Open directory in terminal  
+openjdk-7-jdk - Java JRE and JDK  
+maven - Java software project management  
+eclipse - Java IDE  
+sublime-text - The text editor you'll fall in love with  
+git - Fast, scalable, distributed revision control system  
+meld - Graphical tool to diff and merge files  
+nodejs - Event-based server-side javascript engine
+
+*(npm install -g)*  
+n - Node version manager  
+less - Css preprocessor  
+jshint - JavaScript Code Quality Tool
+
+*(other sources)*  
+bash-git-prompt - Informative git prompt for bash  
+Sublime Package Control - Sublime Text package manager
 
 **Configurations:**  
 Changes theme to ambiance  
