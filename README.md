@@ -8,9 +8,8 @@ http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04
 http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04-desktop-amd64.iso.torrent
 
 -------------------------------------------
-Warning: Modify the script and put in your name/email in the git config commands.
-Please don't leave your commits under my name
-
+<div align="center">Modify the script and put in your name/email in the git config commands.<br />
+Please don't make your commits under my name</div>
 -------------------------------------------
 
 #### What all these commands do:
