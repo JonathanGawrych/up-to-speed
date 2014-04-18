@@ -39,5 +39,3 @@ Development environments (python, c, c++, etc, excluding Java)
 LESS configuration  
 Create ssh key  
 Interactive configuration  
-Remove dumb amd watermark (not applicable to all machines)  
-Remove bloat (honestly, there isn't much in gnome. No search tracking like in unity)  
