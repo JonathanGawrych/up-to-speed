@@ -23,6 +23,7 @@ chromium-browser - Google Chrome without the extras (Flash, PDF, Print-Preview, 
 light-themes - Ambiance Theme (configured below)  
 dmz-cursor-theme - White Cursor  
 nautilus-open-terminal - Right click -> Open directory in terminal  
+gparted - GNOME partition editor  
 openjdk-7-jdk - Java JRE and JDK  
 maven - Java software project management  
 eclipse - Java IDE  
