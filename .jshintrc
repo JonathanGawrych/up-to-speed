@@ -56,7 +56,7 @@
     "noempty":       true,     // Cannot have empty functions or conditionals
     "nonew":         true,     // No using the 'new' operator
     "nonbsp":        true,     // if non-breaking spaces should be disallowed
-    "nomen":         true,     // if names should be checked
+    "nomen":         true,     // if names should be checked for dangling underscores (curb against c++ style of "private" variables)
     "notypeof":      true,     // if should report typos in typeof comparisons
     "onevar":        false,    // OFF; if only one var statement per function should be allowed
     "plusplus":      false,    // OFF; no ++ or --

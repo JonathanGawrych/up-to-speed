@@ -11,7 +11,7 @@ sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-get update
 sudo apt-get install -y nautilus-open-terminal chromium-browser light-themes dmz-cursor-theme openjdk-7-jdk nodejs sublime-text-installer git meld eclipse maven gparted
-sudo npm install -g n less jshint
+sudo npm install -g n less jshint@2.4.4
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
 wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages

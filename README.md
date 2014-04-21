@@ -12,7 +12,7 @@ http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04
 Please don't make your commits under my name</div>
 -------------------------------------------
 
-###$ What all these commands do:
+#### What all these commands do:
 **Adds Repositories:**  
 ppa:chris-lea/node.js  
 ppa:webupd8team/sublime-text-3  
@@ -35,7 +35,7 @@ nodejs - Event-based server-side javascript engine
 *(npm install -g)*  
 n - Node version manager  
 less - Css preprocessor  
-jshint - JavaScript Code Quality Tool
+jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
@@ -61,3 +61,21 @@ Development environments (python, c, c++, etc, excluding Java)
 LESS configuration  
 Create ssh key  
 Interactive configuration  
+
+-------------------------------------------
+#### Why jshint 2.4.4 and not 2.5 or later?
+Version 2.5 sadly removes many features:  
+
+*Features I don't use:*  
+nomen - No dangling underscores in name (curb against c++ style of "private" variables)  
+onevar - Condense all var statements into one at the beginning of the function.  
+passfail - Abort on first error. Used for scripting.  
+gcl - compatibility with Google Closure Linter  
+
+*Features I do use:*  
+indent - checking for proper indentation  
+smarttabs - allow mixed tabs/space for block-level/alignment  
+trailing - checking for trailing whitespace  
+white - checking whitespacing style  
+
+These features are important if we wish to have a consistant coding style thoughout a team project. It can be picky sometimes, but it promotes good habits and helps keep the code readable and maintainable. To lose this functionality is a shame.
