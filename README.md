@@ -34,6 +34,7 @@ nodejs - Event-based server-side javascript engine (temporarily installed with a
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
+yo - CLI tool for scaffolding out Yeoman projects  
 less - Css preprocessor  
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
