@@ -30,9 +30,9 @@ eclipse - Java IDE
 sublime-text - The text editor you'll fall in love with  
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
-nodejs - Event-based server-side javascript engine
+nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)
 
-*(npm install -g)*  
+*(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
 less - Css preprocessor  
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
@@ -42,6 +42,7 @@ bash-git-prompt - Informative git prompt for bash
 Sublime Package Control - Sublime Text package manager
 
 **Configurations:**  
+Due to [running npm with root cause permission problems](http://stackoverflow.com/questions/18212175/npm-yo-keeps-asking-for-sudo-permission), set prefix to ~/.node where sudo isn't required  
 Changes theme to ambiance  
 Adds default .jshintrc to the home directory (from this repo)
 Show 12h AM/PM clock at the top bar (including day abbreviation, date, seconds)  
