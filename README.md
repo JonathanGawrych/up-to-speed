@@ -19,9 +19,9 @@ ppa:webupd8team/sublime-text-3
 
 **Installs:**  
 *(apt-get install)*  
-chromium-browser - Google Chrome without the extras (Flash, PDF, Print-Preview, Google™, Opt-in Usage statistics and Crash reports, AAC, and MP3)  
+chromium-browser - Google Chrome without the extras (Flash, PDF, AAC, MP3, Print-Preview, Google's ™ name/logo, Opt-in usage statistics and crash reports)  
 light-themes - Ambiance Theme (configured below)  
-dmz-cursor-theme - White Cursor  
+dmz-cursor-theme - White Cursor (also configured below)  
 nautilus-open-terminal - Right click -> Open directory in terminal  
 gparted - GNOME partition editor  
 openjdk-7-jdk - Java JRE and JDK  
@@ -30,10 +30,11 @@ eclipse - Java IDE
 sublime-text - The text editor you'll fall in love with  
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
-nodejs - Event-based server-side javascript engine
+nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)
 
-*(npm install -g)*  
+*(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
+yo - CLI tool for scaffolding out Yeoman projects  
 less - Css preprocessor  
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
@@ -42,14 +43,15 @@ bash-git-prompt - Informative git prompt for bash
 Sublime Package Control - Sublime Text package manager
 
 **Configurations:**  
+Due to [running npm with root cause permission problems](http://stackoverflow.com/questions/18212175/npm-yo-keeps-asking-for-sudo-permission), set prefix to ~/.node where sudo isn't required  
 Changes theme to ambiance  
-Adds default .jshintrc to the home directory (from this repo)
+Adds default .jshintrc to the home directory (from this repo)  
 Show 12h AM/PM clock at the top bar (including day abbreviation, date, seconds)  
 Add minimize and maximize back  
 Allows workspaces on multiple monitors  
 Changes favorite apps to nautilus, chromium, firefox, sublime, terminal  
 For gedit, only show tabs if there is more than one tab, show lines numbers, disable word wrap, change tab size to 4, and prevents backup copies (suffixed with "~" that can cause problems when editing system settings)  
-For git, sets meld as the diff/merge tool, show color, change user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple
+For git, sets meld as the diff/merge tool, show color, change user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
 Remove nag from Sublime  
@@ -68,15 +70,15 @@ Interactive configuration
 Version 2.5 sadly removes many features:  
 
 *Features I don't use:*  
-nomen - No dangling underscores in name (curb against c++ style of "private" variables)  
 onevar - Condense all var statements into one at the beginning of the function.  
 passfail - Abort on first error. Used for scripting.  
 gcl - compatibility with Google Closure Linter  
 
 *Features I do use:*  
+nomen - No dangling underscores in name (curb against c++ style of "private" variables)  
 indent - checking for proper indentation  
 smarttabs - allow mixed tabs/space for block-level/alignment  
 trailing - checking for trailing whitespace  
 white - checking whitespacing style  
 
-These features are important if we wish to have a consistant coding style thoughout a team project. It can be picky sometimes, but it promotes good habits and helps keep the code readable and maintainable. To lose this functionality is a shame.
+These features are important if we wish to have a consistent coding style throughout a team project. It can be picky sometimes, but it promotes good habits and helps keep the code readable and maintainable. To lose this functionality is a shame.
