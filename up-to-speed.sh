@@ -7,6 +7,9 @@ if (( EUID == 0 )); then
     exit 1
 fi
 
+# prevent root from creating ~/tmp/ by creating it ourself and cause permission problems
+mkdir ~/tmp/
+
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
