@@ -30,7 +30,7 @@ npm install -g n less jshint@2.4.4 yo
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
 wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
-echo "source ~/.bash-git-prompt/gitprompt.sh" >> .bashrc
+echo "source ~/.bash-git-prompt/gitprompt.sh" >> ~/.bashrc
 
 gsettings set org.gnome.desktop.wm.preferences theme 'Ambiance'
 gsettings set org.gnome.desktop.interface gtk-theme 'Ambiance'
@@ -58,8 +58,8 @@ git config --global mergetool.keepBackup false
 git config --global push.default simple
 
 cp ~/.bash-git-prompt/git-prompt-colors.sh ~/.git-prompt-colors.sh
-sed -i -e 's/\xe2\x97\x8f/\xe2\x80\xa2/' -e 's/\xe2\x9c\x96/\xe2\x98\xa2\x20/' -e 's/\xe2\x9c\x9a/\xc2\xb1/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x86\x91\xc2\xb7/\xe2\x86\x91/' -e 's/\xe2\x86\x93\xc2\xb7/\xe2\x86\x93/' .git-prompt-colors.sh
-printf '\n  GIT_PROMPT_START="$BoldBlue\w$ResetColor"\n  GIT_PROMPT_END=" $ "' >> .git-prompt-colors.sh
+sed -i -e 's/\xe2\x97\x8f/\xe2\x80\xa2/' -e 's/\xe2\x9c\x96/\xe2\x98\xa2\x20/' -e 's/\xe2\x9c\x9a/\xc2\xb1/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x86\x91\xc2\xb7/\xe2\x86\x91/' -e 's/\xe2\x86\x93\xc2\xb7/\xe2\x86\x93/' ~/.git-prompt-colors.sh
+printf '\n  GIT_PROMPT_START="$BoldBlue\w$ResetColor"\n  GIT_PROMPT_END=" $ "' >> ~/.git-prompt-colors.sh
 
 sudo mv /usr/bin/subl /usr/bin/sublime
 sudo bash -c "mv /opt/sublime_text/sublime_text /opt/sublime_text/sublime_text.bak; xxd /opt/sublime_text/sublime_text.bak | sed -e 's/00081e0: 85c0 0f94 c084 c088 05e3 264e 0075 4148/00081e0: 9090 9090 9084 c088 05e3 264e 0075 4148/g' -e 's/007c800: e8ea f7ff ff85 c00f 94c2 84d2 8815 bee0/007c800: e8ea f7ff ff90 900f 94c2 9090 8815 bee0/g' | xxd -r > /opt/sublime_text/sublime_text; chmod a+x /opt/sublime_text/sublime_text"
