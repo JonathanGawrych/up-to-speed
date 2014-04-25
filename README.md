@@ -30,6 +30,7 @@ eclipse - Java IDE
 sublime-text - The text editor you'll fall in love with  
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
+curl - CLI tool for file downloading (needed for n)  
 nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
