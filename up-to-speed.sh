@@ -11,7 +11,7 @@ sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-get update
-sudo apt-get install -y nautilus-open-terminal chromium-browser light-themes dmz-cursor-theme openjdk-7-jdk sublime-text-installer git meld eclipse maven gparted
+sudo apt-get install -y nautilus-open-terminal chromium-browser light-themes dmz-cursor-theme openjdk-7-jdk sublime-text-installer git meld eclipse maven gparted curl
 
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
 # To resolve this cirular dependency, we use apt as the entryway, then run around in a circle
