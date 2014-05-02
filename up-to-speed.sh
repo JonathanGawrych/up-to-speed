@@ -10,6 +10,14 @@ fi
 # prevent root from creating ~/tmp/ by creating it ourself and cause permission problems
 mkdir ~/tmp/
 
+echo ""
+echo "Please enter your name: "
+read name
+
+echo ""
+echo "Please enter your email: "
+read email
+
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
@@ -27,7 +35,7 @@ echo 'export PATH=$PATH:$HOME/.node/bin' >> ~/.bashrc
 echo 'export NODE_PATH=$NODE_PATH:$HOME/.node/lib/node_modules' >> ~/.bashrc
 hash -r
 source ~/.bashrc
-npm install -g n less jshint@2.4.4 yo generator-angular bower grunt
+npm install -g n less jshint@2.4.4 yo bower grunt generator-angular
 
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
@@ -55,10 +63,13 @@ gsettings set org.gnome.nautilus.preferences enable-interactive-search true
 git config --global merge.tool meld
 git config --global diff.tool meld
 git config --global --add color.ui true
-git config --global user.email "Jonathan.Gawrych@gmail.com"
-git config --global user.name "Jonathan.Gawrych"
+git config --global user.email "$email"
+git config --global user.name "$name"
+git config --global core.editor "sublime -wn"
 git config --global mergetool.keepBackup false
 git config --global push.default simple
+
+ssh-keygen -t rsa -b 2048 -C "$email" -N "" -f ~/.ssh/id_rsa
 
 cp ~/.bash-git-prompt/git-prompt-colors.sh ~/.git-prompt-colors.sh
 sed -i -e 's/\xe2\x97\x8f/\xe2\x80\xa2/' -e 's/\xe2\x9c\x96/\xe2\x98\xa2\x20/' -e 's/\xe2\x9c\x9a/\xc2\xb1/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x86\x91\xc2\xb7/\xe2\x86\x91/' -e 's/\xe2\x86\x93\xc2\xb7/\xe2\x86\x93/' ~/.git-prompt-colors.sh

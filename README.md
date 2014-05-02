@@ -8,9 +8,6 @@ http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04
 http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04-desktop-amd64.iso.torrent
 
 -------------------------------------------
-<div align="center">Modify the script and put in your name/email in the git config commands.<br />
-Please don't make your commits under my name</div>
--------------------------------------------
 
 #### What all these commands do:
 **Adds Repositories:**  
@@ -36,6 +33,9 @@ nodejs - Event-based server-side javascript engine (temporarily installed with a
 *(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
 yo - CLI tool for scaffolding out Yeoman projects  
+bower - The browser package manager  
+grunt - The JavaScript Task Runner  
+generator-angular - Yeoman generator for AngularJS
 less - Css preprocessor  
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
@@ -52,10 +52,11 @@ Add minimize and maximize back
 Allows workspaces on multiple monitors  
 Changes favorite apps to nautilus, chromium, firefox, sublime, terminal  
 For gedit, only show tabs if there is more than one tab, show lines numbers, disable word wrap, change tab size to 4, and prevents backup copies (suffixed with "~" that can cause problems when editing system settings)  
-For git, sets meld as the diff/merge tool, show color, change user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
+For git, sets meld as the diff/merge tool, sets sublime as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
 Remove nag from Sublime  
+Creates a ssh key
 
 -------------------------------------------
 #### What's not in the script (yet):
