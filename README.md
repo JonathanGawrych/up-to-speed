@@ -58,6 +58,7 @@ For Nautilus, disable recursive searching
 Remove nag from Sublime  
 Creates a ssh key  
 Disabled middle click paste  
+Enable Ctrl+Alt+Backspace to kill the xserver  
 
 -------------------------------------------
 #### What's not in the script (yet):
