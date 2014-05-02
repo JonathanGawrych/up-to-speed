@@ -52,7 +52,7 @@ Add minimize and maximize back
 Allows workspaces on multiple monitors  
 Changes favorite apps to nautilus, chromium, firefox, sublime, terminal  
 For gedit, only show tabs if there is more than one tab, show lines numbers, disable word wrap, change tab size to 4, and prevents backup copies (suffixed with "~" that can cause problems when editing system settings)  
-For git, sets meld as the diff/merge tool, sets sublime as the core editor, show color, change user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
+For git, sets meld as the diff/merge tool, sets sublime as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
 

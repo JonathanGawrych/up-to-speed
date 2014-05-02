@@ -65,6 +65,7 @@ git config --global diff.tool meld
 git config --global --add color.ui true
 git config --global user.email "$email"
 git config --global user.name "$name"
+git config --global core.editor "sublime -wn"
 git config --global mergetool.keepBackup false
 git config --global push.default simple
 
