@@ -57,6 +57,7 @@ For bash-git-prompt, change the unicode symbols and PS1 style
 For Nautilus, disable recursive searching  
 Creates a ssh key  
 Disabled middle click paste  
+Enable Ctrl+Alt+Backspace to kill the xserver  
 
 -------------------------------------------
 #### What's not in the script (yet):
