@@ -33,6 +33,10 @@ sudo n stable                               # install node/npm from n
 echo prefix = ~/.node >> ~/.npmrc
 echo 'export PATH=$PATH:$HOME/.node/bin' >> ~/.bashrc
 echo 'export NODE_PATH=$NODE_PATH:$HOME/.node/lib/node_modules' >> ~/.bashrc
+echo 'export PYTHONPATH=$PYTHONPATH:$HOME/.node/lib/node_modules' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/.node/bin' >> ~/.profile
+echo 'export NODE_PATH=$NODE_PATH:$HOME/.node/lib/node_modules' >> ~/.profile
+echo 'export PYTHONPATH=$PYTHONPATH:$HOME/.node/lib/node_modules' >> ~/.profile
 hash -r
 source ~/.bashrc
 npm install -g n less jshint@2.4.4 yo bower grunt generator-angular
