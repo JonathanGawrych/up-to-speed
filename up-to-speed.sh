@@ -69,6 +69,8 @@ git config --global core.editor "sublime -wn"
 git config --global mergetool.keepBackup false
 git config --global push.default simple
 
+ssh-keygen -t rsa -b 2048 -C "$email" -N "" -f ~/.ssh/id_rsa
+
 cp ~/.bash-git-prompt/git-prompt-colors.sh ~/.git-prompt-colors.sh
 sed -i -e 's/\xe2\x97\x8f/\xe2\x80\xa2/' -e 's/\xe2\x9c\x96/\xe2\x98\xa2\x20/' -e 's/\xe2\x9c\x9a/\xc2\xb1/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x86\x91\xc2\xb7/\xe2\x86\x91/' -e 's/\xe2\x86\x93\xc2\xb7/\xe2\x86\x93/' ~/.git-prompt-colors.sh
 printf '\n  GIT_PROMPT_START="$BoldBlue\w$ResetColor"\n  GIT_PROMPT_END=" $ "' >> ~/.git-prompt-colors.sh
