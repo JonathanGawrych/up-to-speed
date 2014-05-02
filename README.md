@@ -56,7 +56,8 @@ For git, sets meld as the diff/merge tool, sets sublime as the core editor, show
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
 Remove nag from Sublime  
-Creates a ssh key
+Creates a ssh key  
+Disabled middle click paste  
 
 -------------------------------------------
 #### What's not in the script (yet):
