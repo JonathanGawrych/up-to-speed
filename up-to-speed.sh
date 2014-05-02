@@ -10,6 +10,14 @@ fi
 # prevent root from creating ~/tmp/ by creating it ourself and cause permission problems
 mkdir ~/tmp/
 
+echo ""
+echo "Please enter your name: "
+read name
+
+echo ""
+echo "Please enter your email: "
+read email
+
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
@@ -55,8 +63,8 @@ gsettings set org.gnome.nautilus.preferences enable-interactive-search true
 git config --global merge.tool meld
 git config --global diff.tool meld
 git config --global --add color.ui true
-git config --global user.email "Jonathan.Gawrych@gmail.com"
-git config --global user.name "Jonathan.Gawrych"
+git config --global user.email "$email"
+git config --global user.name "$name"
 git config --global mergetool.keepBackup false
 git config --global push.default simple
 
