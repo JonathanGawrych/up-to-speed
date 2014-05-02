@@ -55,7 +55,8 @@ For gedit, only show tabs if there is more than one tab, show lines numbers, dis
 For git, sets meld as the diff/merge tool, sets sublime as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
-Creates a ssh key
+Creates a ssh key  
+Disabled middle click paste  
 
 -------------------------------------------
 #### What's not in the script (yet):
