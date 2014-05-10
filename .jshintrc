@@ -1,106 +1,110 @@
-{    
-    // Jshint options for itself
-    "maxerr":        9999,     // ON; Set number of errors jshint will do until it gives up. (default 50)
-    "passfail":      false,    // if the scan should stop on first error
+{
+	// Jshint options for itself
+	"maxerr":        9999,     // ON; Set number of errors jshint will do until it gives up. (default 50)
+	"passfail":      false,    // if the scan should stop on first error
 
-    // Relaxing - true makes it less strict, false makes it more strict
-    "asi":           false,    // Suppress warnings about missing semicolons
-    "boss":          false,    // Suppress warnings about expecting comparison (==) instead of assignment (=)
-    "eqnull":        true,     // ON; Suppress warnings about "== null"
-    "evil":          false,    // Suppress warnings about using eval
-    "expr":          false,    // Suppress warnings about using an expression instead of assignments or functions
-    "funcscope":     false,    // Suppress warnings about declaring variables and using them out of scope
-    "globalstrict":  true,     // ON; Suppress warnings about using global strict mode (may break third party code)
-    "iterator":      false,    // Suppress warnings about using __iterator__
-    "lastsemic":     false,    // Suppress warnings about missing semicolons in a one line block
-    "laxbreak":      false,    // Suppress warnings about unsafe line breaking
-    "laxcomma":      false,    // Suppress warnings about starting a line with a comma
-    "loopfunc":      true,     // ON; Suppress warnings about using functions in loops without using anonymous wrapping functions
-    "multistr":      false,    // Suppress warnings about using \ for multiline strings
-    "noyield":       false,    // Suppress warnings about using generators without a yield
-    "proto":         false,    // Suppress warnings about using __proto__
-    "scripturl":     false,    // Suppress warnings about using javascript:[code]
-    "smarttabs":     true,     // ON; use smarttab indenting techniques
-    "shadow":        false,    // Suppress warnings about redeclaring variables
-                               //   "inner"  - check for variables defined in the same scope only
-                               //   "outer"  - check for variables defined in outer scopes as well
-                               //   false    - same as inner
-                               //   true     - allow variable shadowing
-                               //   Note: it may seem buggy because it doesn't seem like "inner" works.
-                               //   See the difference between var and let
-    "sub":           true,     // ON; Suppress warnings about using object['property'] instead of object.property
-    "supernew":      false,    // Suppress warnings about using singleton new function calls
-    "validthis":     false,    // Suppress warnings about violations of strict rules, when 'using strict';
-    "withstmt":      false,    // Suppress warnings about using the "with" keyword
+	// Relaxing - true makes it less strict, false makes it more strict
+	"asi":           false,    // Suppress warnings about missing semicolons
+	"boss":          false,    // Suppress warnings about expecting comparison (==) instead of assignment (=)
+	"eqnull":        true,     // ON; Suppress warnings about "== null"
+	"evil":          false,    // Suppress warnings about using eval
+	"expr":          false,    // Suppress warnings about using an expression instead of assignments or functions
+	"funcscope":     false,    // Suppress warnings about declaring variables and using them out of scope
+	"globalstrict":  true,     // ON; Suppress warnings about using global strict mode (may break third party code)
+	"iterator":      false,    // Suppress warnings about using __iterator__
+	"lastsemic":     false,    // Suppress warnings about missing semicolons in a one line block
+	"laxbreak":      false,    // Suppress warnings about unsafe line breaking
+	"laxcomma":      false,    // Suppress warnings about starting a line with a comma
+	"loopfunc":      true,     // ON; Suppress warnings about using functions in loops without using anonymous wrapping functions
+	"multistr":      false,    // Suppress warnings about using \ for multiline strings
+	"noyield":       false,    // Suppress warnings about using generators without a yield
+	"onecase":       false,    // Suppress warnings about using one case switch statements
+	"proto":         false,    // Suppress warnings about using __proto__
+	"regexdash":     false,    // Suppress warnings about using unescaped first/last dash (-) inside brackets in regex
+	"scripturl":     false,    // Suppress warnings about using javascript:[code]
+	"smarttabs":     true,     // ON; use smarttab indenting techniques
+	"shadow":        false,    // Suppress warnings about redeclaring variables
+	                           //   "inner"  - check for variables defined in the same scope only
+	                           //   "outer"  - check for variables defined in outer scopes as well
+	                           //   false    - same as inner
+	                           //   true     - allow variable shadowing
+	                           //   Note: it may seem buggy because it doesn't seem like "inner" works.
+	                           //   See the difference between 'var' and 'let'
+	"sub":           true,     // ON; Suppress warnings about using object['property'] instead of object.property
+	"supernew":      false,    // Suppress warnings about using singleton new function calls
+	"validthis":     false,    // Suppress warnings about violations of strict rules, when 'using strict';
+	"withstmt":      false,    // Suppress warnings about using the "with" keyword
 
-    // Enforcing - true makes it more strict, false makes it less strict
-    "bitwise":       false,    // OFF; No bitwise (^ | &)
-    "camelcase":     true,     // Variable names must be either: camelCase or UPPER_CASE_CONSTANTS
-    "curly":         false,    // OFF; No omiting curly braces for a single line after conditional
-    "eqeqeq":        true,     // Must use strict comparison (=== and !== instead of == and !=)
-    "forin":         true,     // For(var key in objects) must filter prototyped properties
-    "freeze":        true,     // If modifying native object prototypes should be disallowed
-    "immed":         true,     // Must wrap anonymous self calling functions in () 
-    "indent":        4,        // How many spaces a indentation should be (default 4)
-    "latedef":       "nofunc", // Warn if the variable is used before its definition
-                               //   false    - don't emit any warnings
-                               //   true     - warn if any variable is used before its definition
-                               //   "nofunc" - warn for any variable but function declarations
-    "newcap":        true,     // Must have capitalize name of consturctor functions 
-    "maxdepth":      false,    // OFF; {int} max nested block depth per function
-    "maxlen":        160,      // ON; Set the max line length (default 80)
-    "maxparams":     false,    // OFF; {int} max params per function
-    "maxstatements": false,    // OFF; {int} max statements per function
-    "maxcomplexity": false,    // OFF; {int} max cyclomatic complexity per function
-    "noarg":         true,     // Cannot use arguments.caller or arguments.callee
-    "noempty":       true,     // Cannot have empty functions or conditionals
-    "nonew":         true,     // No using the 'new' operator
-    "nonbsp":        true,     // if non-breaking spaces should be disallowed
-    "nomen":         true,     // if names should be checked for dangling underscores (curb against c++ style of "private" variables)
-    "notypeof":      true,     // if should report typos in typeof comparisons
-    "onevar":        false,    // OFF; if only one var statement per function should be allowed
-    "plusplus":      false,    // OFF; no ++ or --
-    "quotmark":      true,     // use consistency in quotation marks. Available options:
-                               //   false    - don't check for quotation consistency
-                               //   'single' - All strings must be in single quotes
-                               //   "double" - All strings must be in double quotes
-                               //   true     - All strings must be either all single quotes, or all double
-    "strict":        false,    // OFF (too sensitive); require the "use strict"; pragma. 
-    "undef":         true,     // cannot use undefined variables
-    "unused":        true,     // Warn if variables are unused. Available options:
-                               //   false    - don't check for unused variables
-                               //   true     - "vars" + check last function param
-                               //   "vars"   - skip checking unused function params
-                               //   "strict" - "vars" + check all function params
-    "trailing":      true,     // no trailing whitespace
-    "white":         true,     // if strict whitespace rules apply
+	// Enforcing - true makes it more strict, false makes it less strict
+	"bitwise":       false,    // OFF; No bitwise (^ | &)
+	"camelcase":     true,     // Variable names must be either: camelCase or UPPER_CASE_CONSTANTS
+	"curly":         false,    // OFF; No omiting curly braces for a single line after conditional
+	"eqeqeq":        true,     // Must use strict comparison (=== and !== instead of == and !=)
+	"forin":         true,     // For(var key in objects) must filter prototyped properties
+	"freeze":        true,     // If modifying native object prototypes should be disallowed
+	"immed":         true,     // Must wrap anonymous self calling functions in () 
+	"indent":        4,        // How many spaces a indentation should be (default 4)
+	"latedef":       true,     // Warn if the variable is used before its definition
+	                           //   false    - don't emit any warnings
+	                           //   true     - warn if any variable is used before its definition
+	                           //   "nofunc" - warn for any variable but function declarations
+	"newcap":        true,     // Must have capitalize name of consturctor functions 
+	"maxdepth":      false,    // OFF; {int} max nested block depth per function
+	"maxlen":        160,      // ON; Set the max line length (default 80)
+	"maxparams":     false,    // OFF; {int} max params per function
+	"maxstatements": false,    // OFF; {int} max statements per function
+	"maxcomplexity": false,    // OFF; {int} max cyclomatic complexity per function
+	"noarg":         true,     // Cannot use arguments.caller or arguments.callee
+	"noempty":       true,     // Cannot have empty functions or conditionals
+	"nonew":         true,     // No using the 'new' operator
+	"nonbsp":        true,     // if non-breaking spaces should be disallowed
+	"nomen":         true,     // if names should be checked for dangling underscores (curb against c++ style of "private" variables)
+	"notypeof":      true,     // if should report typos in typeof comparisons
+	"onevar":        false,    // OFF; if only one var statement per function should be allowed
+	"plusplus":      false,    // OFF; no ++ or --
+	"quotmark":      true,     // use consistency in quotation marks. Available options:
+	                           //   false    - don't check for quotation consistency
+	                           //   'single' - All strings must be in single quotes
+	                           //   "double" - All strings must be in double quotes
+	                           //   true     - All strings must be either all single quotes, or all double
+	"regexp":        true,     // if the '.' should not be allowed in regexp literals (use \. or [^n] instead)
+	"strict":        true,     // require the "use strict"; pragma. 
+	"undef":         true,     // cannot use undefined variables
+	"unused":        true,     // Warn if variables are unused. Available options:
+	                           //   false    - don't check for unused variables
+	                           //   true     - "vars" + check last function param
+	                           //   "vars"   - skip checking unused function params
+	                           //   "strict" - "vars" + check all function params
+	"trailing":      true,     // no trailing whitespace
+	"white":         true,     // if strict whitespace rules apply
 
-    // Enviroments
-    "browser":       true,     // ON; Assume browser functions are included (such as FileReader, etc.)
-    "couch" :        false,    // if CouchDB globals should be predefined
-    "debug":         true,     // ON; Suppress warnings about debugger statements
-    "devel":         true,     // ON; Don't give errors for console, alert, etc
-    "dojo":          false,    // if Dojo Toolkit globals should be predefined
-    "es3":           false,    // Support legacy browsers (IE 6/7/8)
-    "es5":           true,     // ON; if ES5 syntax should be allowed (is now set per default)
-    "esnext":        false,    // Suppress warnings about using new ECMAScript 6 syntax
-    "gcl":           false,    // if JSHint should be compatible with Google Closure Linter
-    "globals": {               // ON; ignore globals that are defined everywhere
-                               // "Put false for libraries like angular and $. But put this on true for globals you want to redefine yourself, like myApp"
-        "angular":   false
-    },
-    "jquery":        false,    // if jQuery globals should be predefined
-    "mootools":      false,    // if MooTools globals should be predefined
-    "moz":           false,    // if mozilla specific syntax should be allowed
-    "node":          false,    // if the Node.js environment globals should be predefined
-    "nonstandard":   true,     // ON; if non-standard (but widely adopted) globals should be predefined ("escape", "unescape")
-    "phantom":       false,    // if PhantomJS symbols should be allowed
-    "prototypejs" :  false,    // if Prototype and Scriptaculous globals should be predefined
-    "rhino":         false,    // if the Rhino environment globals should be predefined"
-    "typed":         false,    // if typed array globals should be predefined (ArrayBuffer, Int32Array, etc.)
-    "worker":        false,    // if Web Worker script symbols should be allowed
-    "wsh":           false,    // if the Windows Scripting Host environment globals should be predefined
-    "yui":           false     // YUI variables should be predefined
+	// Enviroments
+	"browser":       true,     // ON; Assume browser functions are included (such as FileReader, etc.)
+	"couch" :        false,    // if CouchDB globals should be predefined
+	"debug":         true,     // ON; Suppress warnings about debugger statements
+	"devel":         true,     // ON; Don't give errors for console, alert, etc
+	"dojo":          false,    // if Dojo Toolkit globals should be predefined
+	"es3":           false,    // Support legacy browsers (IE 6/7/8)
+//  "es5":           true,     // ON; if ES5 syntax should be allowed (is now set per default, and gives a silly warning if you set this to true)
+	"esnext":        false,    // Suppress warnings about using new ECMAScript 6 syntax
+	"gcl":           false,    // if JSHint should be compatible with Google Closure Linter
+	"globals": {               // ON; ignore globals that are defined everywhere
+	                           // Use false (read-only) for libraries like angular and $. Use true (read-write) for globals you want to redefine yourself
+		"angular":   false
+	},
+	"jquery":        false,    // if jQuery globals should be predefined
+	"mootools":      false,    // if MooTools globals should be predefined
+	"moz":           false,    // if mozilla specific syntax should be allowed
+	"node":          false,    // if the Node.js environment globals should be predefined
+	"nonstandard":   true,     // ON; if non-standard (but widely adopted) globals should be predefined ("escape", "unescape")
+	"phantom":       false,    // if PhantomJS symbols should be allowed
+	"prototypejs" :  false,    // if Prototype and Scriptaculous globals should be predefined
+	"rhino":         false,    // if the Rhino environment globals should be predefined"
+	"shelljs":       true,     // if ShellJS globals should be predefined
+	"typed":         false,    // if typed array globals should be predefined (ArrayBuffer, Int32Array, etc.)
+	"worker":        false,    // if Web Worker script symbols should be allowed
+	"wsh":           false,    // if the Windows Scripting Host environment globals should be predefined
+	"yui":           false     // YUI variables should be predefined
 
 
 }
