@@ -64,7 +64,7 @@ gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.editor create-backup-copy false
 gsettings set org.gnome.nautilus.preferences enable-interactive-search true
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/EnablePrimaryPaste': <0>}"
-gsettings set org.gnome.desktop.input-sources xkb-options ['terminate:ctrl_alt_bksp']
+gsettings set org.gnome.desktop.input-sources xkb-options "['terminate:ctrl_alt_bksp']"
 
 git config --global merge.tool meld
 git config --global diff.tool meld
