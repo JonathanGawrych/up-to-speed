@@ -65,7 +65,6 @@ All servers (tomcat, nginx, etc.)
 All sublime packages (excluding package control)  
 Development environments (python, c, c++, etc, excluding Java)  
 LESS configuration  
-Create ssh key  
 Interactive configuration  
 
 -------------------------------------------
