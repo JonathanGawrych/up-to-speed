@@ -39,7 +39,7 @@ echo 'export NODE_PATH=$NODE_PATH:$HOME/.node/lib/node_modules' >> ~/.profile
 echo 'export PYTHONPATH=$PYTHONPATH:$HOME/.node/lib/node_modules' >> ~/.profile
 hash -r
 source ~/.bashrc
-npm install -g n less jshint@2.4.4 yo bower grunt generator-angular
+npm install -g --prefix=$(npm config get prefix) n less jshint@2.4.4 yo bower grunt generator-angular
 
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
