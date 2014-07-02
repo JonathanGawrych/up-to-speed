@@ -21,8 +21,9 @@ read email
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo add-apt-repository -y ppa:webupd8team/atom
 sudo apt-get update
-sudo apt-get install -y nautilus-open-terminal chromium-browser light-themes dmz-cursor-theme openjdk-7-jdk sublime-text-installer git meld eclipse maven gparted curl
+sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme openjdk-7-jdk sublime-text-installer git meld eclipse maven gparted curl atom google-chrome-stable vim
 
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
 # To resolve this cirular dependency, we use apt as the entryway, then run around in a circle
@@ -56,7 +57,7 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.shell.calendar show-weekdate true
 gsettings set org.gnome.shell.overrides button-layout ':minimize,maximize,close'
 gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
-gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'chromium-browser.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
+gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'google-chrome.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
 gsettings set org.gnome.gedit.preferences.ui notebook-show-tabs-mode 'auto'
 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
 gsettings set org.gnome.gedit.preferences.editor wrap-mode 'none'
