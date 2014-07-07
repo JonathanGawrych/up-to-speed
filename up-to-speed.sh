@@ -105,7 +105,11 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.shell.calendar show-weekdate true
 gsettings set org.gnome.shell.overrides button-layout ':minimize,maximize,close'
 gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
-gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'google-chrome.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
+if [ "$chrome" == "N" ] || [ "$chrome" == "n" ]
+	then gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'chromium-browser.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
+else
+	gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'google-chrome.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
+fi
 gsettings set org.gnome.gedit.preferences.ui notebook-show-tabs-mode 'auto'
 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
 gsettings set org.gnome.gedit.preferences.editor wrap-mode 'none'
