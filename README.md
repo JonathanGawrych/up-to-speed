@@ -80,7 +80,7 @@ Enable Ctrl+Alt+Backspace to kill the xserver
 
 -------------------------------------------
 #### What's not in the script (yet):
-~~All~~ servers (tomcat, ~~nginx, etc.~~)  
+~~All~~ servers (~~tomcat~~, nginx, etc.)  
 All sublime packages (excluding package control)  
 Development environments (python, c, c++, etc, excluding Java)  
 LESS configuration  
