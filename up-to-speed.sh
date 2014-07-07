@@ -42,6 +42,8 @@ hash -r
 source ~/.bashrc
 npm install -g --prefix=$(npm config get prefix) less jshint@2.4.4 yo bower grunt generator-angular
 
+# Atom packes
+apm install color-picker linter linter-jshint css-color-highlight emmet editorconfig file-icons minimap minimap-git-diff minimap-color-hilight image-view git-difftool
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
 wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
