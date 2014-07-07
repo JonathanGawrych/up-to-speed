@@ -32,6 +32,7 @@ git - Fast, scalable, distributed revision control system
 meld - Graphical tool to diff and merge files  
 curl - CLI tool for file downloading (needed for n)  
 nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)
+tomcat7 - Servlet and JSP engine
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
@@ -79,7 +80,7 @@ Enable Ctrl+Alt+Backspace to kill the xserver
 
 -------------------------------------------
 #### What's not in the script (yet):
-All servers (tomcat, nginx, etc.)  
+~~All~~ servers (tomcat, ~~nginx, etc.~~)  
 All sublime packages (excluding package control)  
 Development environments (python, c, c++, etc, excluding Java)  
 LESS configuration  
