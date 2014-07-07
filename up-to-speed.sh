@@ -34,6 +34,14 @@ if [ -z "$editor" ]
 	then editor="B"
 fi
 
+echo ""
+echo "Do you want Chrome (otherwise you'll get chromium) (Y (default)/N)"
+read chrome
+
+if [ -z "$chrome" ]
+	then chrome="Y"
+fi
+
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
 if [ "$editor" == "S" ] || [ "$editor" == "B" ] || [ "$editor" == "s" ] || [ "$editor" == "b" ]
@@ -43,7 +51,7 @@ if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$e
 	then sudo add-apt-repository -y ppa:webupd8team/atom
 fi
 sudo apt-get update
-sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme openjdk-7-jdk sublime-text-installer git meld eclipse maven gparted curl atom google-chrome-stable vim
+sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme openjdk-7-jdk git meld eclipse maven gparted curl vim
 
 if [ "$editor" == "S" ] || [ "$editor" == "B" ] || [ "$editor" == "s" ] || [ "$editor" == "b" ]
 	then sudo apt-get install -y sublime-text-installer
@@ -53,6 +61,11 @@ if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$e
 fi
 if [ "$tomcat" == "Y" ] || [ "$tomcat" == "y" ]
 	then sudo apt-get install -y tomcat7
+fi
+if [ "$chrome" == "N" ] || [ "$chrome" == "n" ]
+	then sudo apt-get install -y chromium-browser
+else
+	sudo apt-get install -y google-chrome-stable
 fi
 
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
