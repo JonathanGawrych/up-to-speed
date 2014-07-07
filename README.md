@@ -17,7 +17,7 @@ ppa:webupd8team/atom
 
 **Installs:**  
 *(apt-get install)*  
-google-chrome-stable - The web browser from Google
+google-chrome-stable - The web browser from Google  
 light-themes - Ambiance Theme (configured below)  
 dmz-cursor-theme - White Cursor (also configured below)  
 nautilus-open-terminal - Right click -> Open directory in terminal  
@@ -43,18 +43,18 @@ less - Css preprocessor
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
 *(apm install (Atom Packages))*  
-color-picker 
-linter 
-linter-jshint 
-css-color-highlight 
-emmet 
-editorconfig 
-file-icons 
-minimap 
-minimap-git-diff 
-minimap-color-hilight 
-image-view 
-git-difftool
+color-picker  
+linter  
+linter-jshint  
+css-color-highlight  
+emmet  
+editorconfig  
+file-icons  
+minimap  
+minimap-git-diff  
+minimap-color-hilight  
+image-view  
+git-difftool  
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
