@@ -42,7 +42,7 @@ generator-angular - Yeoman generator for AngularJS
 less - Css preprocessor  
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
-*(apm install (Atom Packages))*
+*(apm install (Atom Packages))*  
 color-picker 
 linter 
 linter-jshint 
