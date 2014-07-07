@@ -18,8 +18,10 @@ ppa:webupd8team/atom
 **Installs:**  
 *(apt-get install)*  
 chromium-browser - Google Chrome without the extras (Flash, PDF, AAC, MP3, Print-Preview, Google's ™ name/logo, Opt-in usage statistics and crash reports)  
-*OR*  
+**OR**  
 google-chrome-stable - The web browser from Google  
+
+
 light-themes - Ambiance Theme (configured below)  
 dmz-cursor-theme - White Cursor (also configured below)  
 nautilus-open-terminal - Right click -> Open directory in terminal  
@@ -27,10 +29,14 @@ gparted - GNOME partition editor
 openjdk-7-jdk - Java JRE and JDK  
 maven - Java software project management  
 eclipse - Java IDE  
+
+
 sublime-text - The text editor you'll fall in love with  
-*AND/OR*  
-atom - A hackable text editor for the 21st Century
-vim - You know what vim is
+**AND/OR**  
+atom - A hackable text editor for the 21st Century  
+
+
+vim - You know what vim is  
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
 curl - CLI tool for file downloading (needed for n)  
