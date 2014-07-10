@@ -87,7 +87,7 @@ npm install -g --prefix=$(npm config get prefix) less jshint@2.4.4 yo bower grun
 
 # Atom packes
 if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
-	then apm install color-picker linter linter-jshint css-color-highlight emmet editorconfig file-icons minimap minimap-git-diff minimap-color-hilight image-view git-difftool
+	then apm install color-picker linter linter-jshint css-color-highlight emmet editorconfig file-icons minimap minimap-git-diff minimap-color-hilight image-view git-difftool autocomplete-plus autocomplete-snippets autocomplete-paths
 fi
 
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
