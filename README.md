@@ -65,6 +65,9 @@ minimap-git-diff
 minimap-color-hilight  
 image-view  
 git-difftool  
+autocomplete-plus  
+autocomplete-snippets  
+autocomplete-paths  
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
