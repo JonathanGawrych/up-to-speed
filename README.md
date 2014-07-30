@@ -13,6 +13,7 @@ http://cdimage.ubuntu.com/ubuntu-gnome/releases/14.04/release/ubuntu-gnome-14.04
 **Adds Repositories:**  
 ppa:chris-lea/node.js  
 ppa:webupd8team/sublime-text-3  
+ppa:webupd8team/atom
 
 **Installs:**  
 *(apt-get install)*  
@@ -24,11 +25,19 @@ gparted - GNOME partition editor
 openjdk-7-jdk - Java JRE and JDK  
 maven - Java software project management  
 eclipse - Java IDE  
+
+
 sublime-text - The text editor you'll fall in love with  
+**AND/OR**  
+atom - A hackable text editor for the 21st Century  
+
+
+vim - You know what vim is  
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
 curl - CLI tool for file downloading (needed for n)  
 nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)
+tomcat7 - Servlet and JSP engine
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
@@ -38,6 +47,23 @@ grunt - The JavaScript Task Runner
 generator-angular - Yeoman generator for AngularJS
 less - Css preprocessor  
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
+
+*(apm install (Atom Packages))*  
+color-picker  
+linter  
+linter-jshint  
+css-color-highlight  
+emmet  
+editorconfig  
+file-icons  
+minimap  
+minimap-git-diff  
+minimap-color-hilight  
+image-view  
+git-difftool  
+autocomplete-plus  
+autocomplete-snippets  
+autocomplete-paths  
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
@@ -62,7 +88,7 @@ Enable Ctrl+Alt+Backspace to kill the xserver
 
 -------------------------------------------
 #### What's not in the script (yet):
-All servers (tomcat, nginx, etc.)  
+~~All~~ servers (~~tomcat~~, nginx, etc.)  
 All sublime packages (excluding package control)  
 Development environments (python, c, c++, etc, excluding Java)  
 LESS configuration  
