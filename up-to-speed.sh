@@ -52,7 +52,7 @@ if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$e
 	then sudo apt-get install -y atom
 fi
 if [ "$tomcat" == "Y" ] || [ "$tomcat" == "y" ]
-	then sudo apt-get install -y tomcat7
+	then sudo apt-get install -y tomcat7 tomcat7-admin tomcat7-common tomcat7-docs tomcat7-examples tomcat7-user
 fi
 
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
