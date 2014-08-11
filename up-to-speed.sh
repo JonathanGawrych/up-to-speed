@@ -8,7 +8,8 @@ if (( EUID == 0 )); then
 fi
 
 # prevent root from creating ~/tmp/ by creating it ourself and cause permission problems
-mkdir ~/tmp/
+# Make .node because in the later versions of npm, it's too stupid to make a folder anymore
+mkdir ~/tmp/ ~/.node/
 
 echo ""
 echo "Please enter your name: "
