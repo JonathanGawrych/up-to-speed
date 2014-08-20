@@ -36,8 +36,9 @@ vim - You know what vim is
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
 curl - CLI tool for file downloading (needed for n)  
-nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)
-tomcat7 - Servlet and JSP engine
+nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)  
+tomcat7 - Servlet and JSP engine  
+nginx - Reverse proxy server and web server
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
 n - Node version manager  
@@ -85,14 +86,6 @@ Remove nag from Sublime
 Creates a ssh key  
 Disabled middle click paste  
 Enable Ctrl+Alt+Backspace to kill the xserver  
-
--------------------------------------------
-#### What's not in the script (yet):
-~~All~~ servers (~~tomcat~~, nginx, etc.)  
-All sublime packages (excluding package control)  
-Development environments (python, c, c++, etc, excluding Java)  
-LESS configuration  
-Interactive configuration  
 
 -------------------------------------------
 #### Why jshint 2.4.4 and not 2.5 or later?
