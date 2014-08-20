@@ -28,6 +28,14 @@ if [ -z "$tomcat" ]
 fi
 
 echo ""
+echo "Would you like to install nginx? (Y (default)/N)"
+read nginx
+
+if [ -z "$nginx" ]
+	then nginx="Y"
+fi
+
+echo ""
 echo "Do you want Sublime, Atom, Both, or Neither? (S/A/B (default)/N)"
 read editor
 
@@ -54,6 +62,9 @@ if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$e
 fi
 if [ "$tomcat" == "Y" ] || [ "$tomcat" == "y" ]
 	then sudo apt-get install -y tomcat7 tomcat7-admin tomcat7-common tomcat7-docs tomcat7-examples tomcat7-user
+fi
+if [ "$nginx" == "Y" ] || [ "$nginx" == "y" ]
+	then sudo apt-get install -y nginx
 fi
 
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
