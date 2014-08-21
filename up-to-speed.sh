@@ -56,6 +56,8 @@ sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme ope
 
 if [ "$editor" == "S" ] || [ "$editor" == "B" ] || [ "$editor" == "s" ] || [ "$editor" == "b" ]
 	then sudo apt-get install -y sublime-text-installer
+	sudo mv /usr/bin/subl /usr/bin/sublime
+	wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
 fi
 if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
 	then sudo apt-get install -y atom
@@ -91,7 +93,6 @@ fi
 
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
-wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
 echo "source ~/.bash-git-prompt/gitprompt.sh" >> ~/.bashrc
 
@@ -128,5 +129,3 @@ ssh-keygen -t rsa -b 2048 -C "$email" -N "" -f ~/.ssh/id_rsa
 cp ~/.bash-git-prompt/git-prompt-colors.sh ~/.git-prompt-colors.sh
 sed -i -e 's/\xe2\x97\x8f/\xe2\x80\xa2/' -e 's/\xe2\x9c\x96/\xe2\x98\xa2\x20/' -e 's/\xe2\x9c\x9a/\xc2\xb1/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x86\x91\xc2\xb7/\xe2\x86\x91/' -e 's/\xe2\x86\x93\xc2\xb7/\xe2\x86\x93/' ~/.git-prompt-colors.sh
 printf '\n  GIT_PROMPT_START="$BoldBlue\w$ResetColor"\n  GIT_PROMPT_END=" $ "' >> ~/.git-prompt-colors.sh
-
-sudo mv /usr/bin/subl /usr/bin/sublime
