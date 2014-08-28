@@ -90,6 +90,7 @@ npm install -g --prefix=$(npm config get prefix) less jshint@2.4.4 yo bower grun
 # Atom packes
 if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
 	then apm install atom-color-highlight atom-jshint autocomplete-paths autocomplete-plus color-picker editorconfig enhanced-package-list file-icons git-difftool minimap minimap-color-highlight minimap-find-and-replace minimap-git-diff minimap-highlight-selected minimap-selection monokai project-palette-finder
+	echo -e "\n'.workspace .editor:not(.mini)':\n  'ctrl-shift-L': 'editor:split-selections-into-lines'" >> ~/.atom/keymap.cson
 fi
 
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
