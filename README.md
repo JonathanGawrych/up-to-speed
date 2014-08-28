@@ -50,21 +50,23 @@ less - Css preprocessor
 jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
 
 *(apm install (Atom Packages))*  
-color-picker  
-linter  
-linter-jshint  
-css-color-highlight  
-emmet  
-editorconfig  
-file-icons  
-minimap  
-minimap-git-diff  
-minimap-color-hilight  
-image-view  
-git-difftool  
-autocomplete-plus  
-autocomplete-snippets  
+atom-color-highlight  
+atom-jshint  
 autocomplete-paths  
+autocomplete-plus  
+color-picker  
+editorconfig  
+enhanced-package-list  
+file-icons  
+git-difftool  
+minimap  
+minimap-color-highlight  
+minimap-find-and-replace  
+minimap-git-diff  
+minimap-highlight-selected  
+minimap-selection  
+monokai  
+project-palette-finder  
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
