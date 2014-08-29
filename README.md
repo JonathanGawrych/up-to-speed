@@ -67,6 +67,8 @@ minimap-highlight-selected
 minimap-selection  
 monokai  
 project-palette-finder  
+sublime-tabs  
+tabs-to-spaces
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
