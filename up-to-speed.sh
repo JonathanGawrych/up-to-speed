@@ -57,7 +57,6 @@ sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme ope
 if [ "$editor" == "S" ] || [ "$editor" == "B" ] || [ "$editor" == "s" ] || [ "$editor" == "b" ]
 	then sudo apt-get install -y sublime-text-installer
 	sudo mv /usr/bin/subl /usr/bin/sublime
-	sudo bash -c "mv /opt/sublime_text/sublime_text /opt/sublime_text/sublime_text.bak; xxd /opt/sublime_text/sublime_text.bak | sed -e 's/00081e0: 85c0 0f94 c084 c088 05e3 264e 0075 4148/00081e0: 9090 9090 9084 c088 05e3 264e 0075 4148/g' -e 's/007c800: e8ea f7ff ff85 c00f 94c2 84d2 8815 bee0/007c800: e8ea f7ff ff90 900f 94c2 9090 8815 bee0/g' | xxd -r > /opt/sublime_text/sublime_text; chmod a+x /opt/sublime_text/sublime_text"
 	wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
 fi
 if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
