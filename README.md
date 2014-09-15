@@ -45,7 +45,7 @@ n - Node version manager
 yo - CLI tool for scaffolding out Yeoman projects  
 bower - The browser package manager  
 grunt - The JavaScript Task Runner  
-generator-angular - Yeoman generator for AngularJS
+generator-angular - Yeoman generator for AngularJS  
 less - Css preprocessor  
 jshint - JavaScript Code Quality Tool
 
