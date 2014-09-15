@@ -47,7 +47,7 @@ bower - The browser package manager
 grunt - The JavaScript Task Runner  
 generator-angular - Yeoman generator for AngularJS
 less - Css preprocessor  
-jshint@2.4.4 - JavaScript Code Quality Tool version 2.4.4. View why I won't use 2.5 at the bottome of this readme
+jshint - JavaScript Code Quality Tool
 
 *(apm install (Atom Packages))*  
 atom-color-highlight  
@@ -89,21 +89,3 @@ For Nautilus, disable recursive searching
 Creates a ssh key  
 Disabled middle click paste  
 Enable Ctrl+Alt+Backspace to kill the xserver  
-
--------------------------------------------
-#### Why jshint 2.4.4 and not 2.5 or later?
-Version 2.5 sadly removes many features:  
-
-*Features I don't use:*  
-onevar - Condense all var statements into one at the beginning of the function.  
-passfail - Abort on first error. Used for scripting.  
-gcl - compatibility with Google Closure Linter  
-
-*Features I do use:*  
-nomen - No dangling underscores in name (curb against c++ style of "private" variables)  
-indent - checking for proper indentation  
-smarttabs - allow mixed tabs/space for block-level/alignment  
-trailing - checking for trailing whitespace  
-white - checking whitespacing style  
-
-These features are important if we wish to have a consistent coding style throughout a team project. It can be picky sometimes, but it promotes good habits and helps keep the code readable and maintainable. To lose this functionality is a shame.
