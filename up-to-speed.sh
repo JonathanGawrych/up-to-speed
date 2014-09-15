@@ -12,61 +12,118 @@ fi
 mkdir ~/tmp/ ~/.node/
 
 echo ""
-echo "Please enter your name: "
+echo "Please enter your name (for git): "
 read name
 
 echo ""
-echo "Please enter your email: "
+echo "Please enter your email (for git): "
 read email
 
 echo ""
-echo "Would you like to install tomcat? (Y (default)/N)"
+echo "Would you like to install tomcat? (Y/n) "
 read tomcat
 
-if [ -z "$tomcat" ]
-	then tomcat="Y"
+if [ -z "$tomcat" ]; then
+	tomcat="Y"
 fi
+tomcat="${tomcat^^}" #toUpperCase
 
 echo ""
-echo "Would you like to install nginx? (Y (default)/N)"
+echo "Would you like to install nginx? (Y/n) "
 read nginx
 
-if [ -z "$nginx" ]
-	then nginx="Y"
+if [ -z "$nginx" ]; then
+	nginx="Y"
 fi
+nginx="${nginx^^}" #toUpperCase
 
 echo ""
-echo "Do you want Sublime, Atom, Both, or Neither? (S/A/B (default)/N)"
-read editor
+echo "Would you like to install sublime? (Y/n) "
+read sublime
 
-if [ -z "$editor" ]
-	then editor="B"
+if [ -z "$sublime" ]; then
+	sublime="Y"
 fi
+sublime="${sublime^^}" #toUpperCase
+
+echo ""
+echo "Would you like to install atom? (Y/n) "
+read atom
+
+if [ -z "$atom" ]; then
+	atom="Y"
+fi
+atom="${atom^^}" #toUpperCase
+
+if [ "$sublime" == "Y" ] && [ "$atom" == "Y" ]; then
+	echo ""
+	echo "Would you like sublime or atom as your default editor? (A/s) "
+	read defaulteditor
+
+	if [ -z "$defaulteditor" ]; then
+		defaulteditor="A"
+	fi
+elif [ "$sublime" == "Y" ]; then
+	defaulteditor="S"
+elif [ "$atom" == "Y" ]; then
+	defaulteditor="A"
+else
+	defaulteditor="N"
+fi
+
+defaulteditor="${defaulteditor^^}" #toUpperCase
 
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:chris-lea/node.js
-if [ "$editor" == "S" ] || [ "$editor" == "B" ] || [ "$editor" == "s" ] || [ "$editor" == "b" ]
-	then sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+
+if [ "$sublime" == "Y" ]; then
+	sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 fi
-if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
-	then sudo add-apt-repository -y ppa:webupd8team/atom
+
+if [ "$atom" == "Y" ]; then
+	sudo add-apt-repository -y ppa:webupd8team/atom
 fi
+
 sudo apt-get update
 sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme openjdk-7-jdk git meld eclipse maven gparted curl vim chromium-browser
 
-if [ "$editor" == "S" ] || [ "$editor" == "B" ] || [ "$editor" == "s" ] || [ "$editor" == "b" ]
-	then sudo apt-get install -y sublime-text-installer
+if [ "$sublime" == "Y" ]; then
+	sudo apt-get install -y sublime-text-installer
 	sudo mv /usr/bin/subl /usr/bin/sublime
 	wget https://sublime.wbond.net/Package%20Control.sublime-package -P ~/.config/sublime-text-3/Installed\ Packages
 fi
-if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
-	then sudo apt-get install -y atom
+
+if [ "$atom" == "Y" ]; then
+	sudo apt-get install -y atom
+	# install one at a time, so that if one failes, all the ones after it don't
+	apm install atom-color-highlight
+	apm install atom-jshint
+	apm install autocomplete-paths
+	apm install autocomplete-plus
+	apm install color-picker
+	apm install editorconfig
+	apm install enhanced-package-list
+	apm install file-icons
+	apm install git-difftool
+	apm install minimap
+	apm install minimap-color-highlight
+	apm install minimap-find-and-replace
+	apm install minimap-git-diff
+	apm install minimap-highlight-selected
+	apm install minimap-selection
+	apm install monokai
+	apm install project-palette-finder
+	apm install sublime-tabs
+	apm install tabs-to-spaces
+	echo -e "\n'.workspace .editor:not(.mini)':\n  'ctrl-shift-L': 'editor:split-selections-into-lines'" >> ~/.atom/keymap.cson
 fi
-if [ "$tomcat" == "Y" ] || [ "$tomcat" == "y" ]
-	then sudo apt-get install -y tomcat7 tomcat7-admin tomcat7-common tomcat7-docs tomcat7-examples tomcat7-user
+
+if [ "$tomcat" == "Y" ]; then
+	sudo apt-get install -y tomcat7 tomcat7-admin tomcat7-common tomcat7-docs tomcat7-examples tomcat7-user
 fi
-if [ "$nginx" == "Y" ] || [ "$nginx" == "y" ]
-	then sudo apt-get install -y nginx
+
+if [ "$nginx" == "Y" ]; then
+	sudo apt-get install -y nginx
 fi
 
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
@@ -86,12 +143,6 @@ hash -r
 source ~/.bashrc
 npm install -g --prefix=$(npm config get prefix) less jshint yo bower grunt generator-angular
 
-# Atom packes
-if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
-	then apm install atom-color-highlight atom-jshint autocomplete-paths autocomplete-plus color-picker editorconfig enhanced-package-list file-icons git-difftool minimap minimap-color-highlight minimap-find-and-replace minimap-git-diff minimap-highlight-selected minimap-selection monokai project-palette-finder sublime-tabs tabs-to-spaces
-	echo -e "\n'.workspace .editor:not(.mini)':\n  'ctrl-shift-L': 'editor:split-selections-into-lines'" >> ~/.atom/keymap.cson
-fi
-
 # If they clone the repo, copy it. If they just downloaded the script, attempt to grab it from github.
 [ -f .jshintrc ] && cp .jshintrc ~ || wget https://raw.githubusercontent.com/JonathanGawrych/Linux-up-to-speed/master/.jshintrc -P ~
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt
@@ -106,7 +157,15 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 gsettings set org.gnome.shell.calendar show-weekdate true
 gsettings set org.gnome.shell.overrides button-layout ':minimize,maximize,close'
 gsettings set org.gnome.shell.overrides workspaces-only-on-primary false
-gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'chromium-browser.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
+
+if [ "$defaulteditor" == "A" ]; then
+	gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'chromium-browser.desktop', 'firefox.desktop', 'atom.desktop', 'gnome-terminal.desktop']"
+elif [ "$defaulteditor" == "S" ]; then
+	gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'chromium-browser.desktop', 'firefox.desktop', 'sublime-text.desktop', 'gnome-terminal.desktop']"
+else
+	gsettings set org.gnome.shell favorite-apps "['nautilus.desktop', 'chromium-browser.desktop', 'firefox.desktop', 'gnome-terminal.desktop']"
+fi
+
 gsettings set org.gnome.gedit.preferences.ui notebook-show-tabs-mode 'auto'
 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
 gsettings set org.gnome.gedit.preferences.editor wrap-mode 'none'
@@ -121,7 +180,13 @@ git config --global diff.tool meld
 git config --global --add color.ui true
 git config --global user.email "$email"
 git config --global user.name "$name"
-git config --global core.editor "sublime -wn"
+
+if [ "$defaulteditor" == "A" ]; then
+	git config --global core.editor "atom -wn"
+elif [ "$defaulteditor" == "S" ]; then
+	git config --global core.editor "sublime -wn"
+fi
+
 git config --global mergetool.keepBackup false
 git config --global push.default simple
 
