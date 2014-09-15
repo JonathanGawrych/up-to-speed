@@ -84,7 +84,7 @@ echo 'export NODE_PATH=$NODE_PATH:$HOME/.node/lib/node_modules' >> ~/.profile
 echo 'export PYTHONPATH=$PYTHONPATH:$HOME/.node/lib/node_modules' >> ~/.profile
 hash -r
 source ~/.bashrc
-npm install -g --prefix=$(npm config get prefix) less jshint@2.4.4 yo bower grunt generator-angular
+npm install -g --prefix=$(npm config get prefix) less jshint yo bower grunt generator-angular
 
 # Atom packes
 if [ "$editor" == "A" ] || [ "$editor" == "B" ] || [ "$editor" == "a" ] || [ "$editor" == "b" ]
