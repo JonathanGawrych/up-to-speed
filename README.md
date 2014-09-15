@@ -50,25 +50,25 @@ less - Css preprocessor
 jshint - JavaScript Code Quality Tool
 
 *(apm install (Atom Packages))*  
-atom-color-highlight  
-atom-jshint  
-autocomplete-paths  
-autocomplete-plus  
-color-picker  
-editorconfig  
-enhanced-package-list  
-file-icons  
-git-difftool  
-minimap  
-minimap-color-highlight  
-minimap-find-and-replace  
-minimap-git-diff  
-minimap-highlight-selected  
-minimap-selection  
-monokai  
-project-palette-finder  
-sublime-tabs  
-tabs-to-spaces
+atom-color-highlight - Highlights color in files  
+atom-jshint - Validates your JS against JSHint as you type. The original and most used  
+autocomplete-paths - Adds path autocompletion to autocomplete+  
+autocomplete-plus - Display possible completions in the editor while typing  
+color-picker - A Color Picker for the Atom Editor. Right click a color and select color picker to open it  
+editorconfig - Helps developers maintain consistent coding styles between different editors  
+enhanced-package-list - Adds an icon to bundled packages and fades out disabled packages in the settings view  
+file-icons - Assign file extension icons and colours for improved visual grepping  
+git-difftool - Opens the current project in the diff tool you have configured in your .gitconfig  
+minimap - A preview of the full source code  
+minimap-color-highlight - A minimap binding for the atom-color-highlight package  
+minimap-find-and-replace - A minimap bindings for the find and replace package  
+minimap-git-diff - A minimap binding for the git diff package  
+minimap-highlight-selected - A minimap binding for the highlight-selected package  
+minimap-selection - Display the buffer's selections on the minimap  
+monokai - A monokai syntax theme for Atom  
+project-palette-finder - Finds and archive colors defined in a project's less/sass/stylus files  
+sublime-tabs - Sublime-style tabs  
+tabs-to-spaces - Provides the ability to convert between leading tabs and spaces in a document
 
 *(other sources)*  
 bash-git-prompt - Informative git prompt for bash  
