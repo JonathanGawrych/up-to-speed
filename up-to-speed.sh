@@ -85,7 +85,7 @@ if [ "$atom" == "Y" ]; then
 fi
 
 sudo apt-get update
-sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme openjdk-7-jdk git meld eclipse maven gparted curl vim chromium-browser
+sudo apt-get install -y nautilus-open-terminal light-themes dmz-cursor-theme openjdk-7-jdk openjdk-7-source git meld eclipse maven gparted curl vim chromium-browser
 
 if [ "$sublime" == "Y" ]; then
 	sudo apt-get install -y sublime-text-installer
