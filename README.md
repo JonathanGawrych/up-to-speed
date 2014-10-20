@@ -23,6 +23,7 @@ dmz-cursor-theme - White Cursor (also configured below)
 nautilus-open-terminal - Right click -> Open directory in terminal  
 gparted - GNOME partition editor  
 openjdk-7-jdk - Java JRE and JDK  
+openjdk-7-source - Java source code
 maven - Java software project management  
 eclipse - Java IDE  
 
