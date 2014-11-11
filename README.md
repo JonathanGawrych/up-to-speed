@@ -26,13 +26,8 @@ openjdk-7-jdk - Java JRE and JDK
 openjdk-7-source - Java source code
 maven - Java software project management  
 eclipse - Java IDE  
-
-
 sublime-text - The text editor you'll fall in love with  
-**AND/OR**  
 atom - A hackable text editor for the 21st Century  
-
-
 vim - You know what vim is  
 git - Fast, scalable, distributed revision control system  
 meld - Graphical tool to diff and merge files  
@@ -84,7 +79,7 @@ Add minimize and maximize back
 Allows workspaces on multiple monitors  
 Changes favorite apps to nautilus, chromium, firefox, sublime, terminal  
 For gedit, only show tabs if there is more than one tab, show lines numbers, disable word wrap, change tab size to 4, and prevents backup copies (suffixed with "~" that can cause problems when editing system settings)  
-For git, sets meld as the diff/merge tool, sets sublime as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple  
+For git, sets meld as the diff/merge tool, sets sublime as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple, and set the tab length of git pager to 4  
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
 Creates a ssh key  
