@@ -177,10 +177,13 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/Enabl
 gsettings set org.gnome.desktop.input-sources xkb-options "['terminate:ctrl_alt_bksp']"
 
 git config --global merge.tool meld
+git config --global mergetool.keepBackup false
 git config --global diff.tool meld
 git config --global --add color.ui true
+git config --global push.default simple
 git config --global user.email "$email"
 git config --global user.name "$name"
+git config --global core.pager 'less -x5,9'
 
 if [ "$defaulteditor" == "A" ]; then
 	git config --global core.editor "atom -wn"
@@ -188,8 +191,6 @@ elif [ "$defaulteditor" == "S" ]; then
 	git config --global core.editor "sublime -wn"
 fi
 
-git config --global mergetool.keepBackup false
-git config --global push.default simple
 
 ssh-keygen -t rsa -b 2048 -C "$email" -N "" -f ~/.ssh/id_rsa
 
