@@ -47,7 +47,6 @@ jshint - JavaScript Code Quality Tool
 
 *(apm install (Atom Packages))*  
 atom-color-highlight - Highlights color in files  
-atom-jshint - Validates your JS against JSHint as you type. The original and most used  
 autocomplete-paths - Adds path autocompletion to autocomplete+  
 autocomplete-plus - Display possible completions in the editor while typing  
 color-picker - A Color Picker for the Atom Editor. Right click a color and select color picker to open it  
@@ -55,6 +54,9 @@ editorconfig - Helps developers maintain consistent coding styles between differ
 enhanced-package-list - Adds an icon to bundled packages and fades out disabled packages in the settings view  
 file-icons - Assign file extension icons and colours for improved visual grepping  
 git-difftool - Opens the current project in the diff tool you have configured in your .gitconfig  
+linter - Validates your code using linters  
+linter-jscs - Linter plugin for JavaScript, using JSCS  
+linter-jshint - Linter plugin for JavaScript, using jshint  
 minimap - A preview of the full source code  
 minimap-color-highlight - A minimap binding for the atom-color-highlight package  
 minimap-find-and-replace - A minimap bindings for the find and replace package  
