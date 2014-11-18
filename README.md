@@ -75,6 +75,7 @@ Sublime Package Control - Sublime Text package manager
 Due to [running npm with root cause permission problems](http://stackoverflow.com/questions/18212175/npm-yo-keeps-asking-for-sudo-permission), set prefix to ~/.node where sudo isn't required  
 Changes theme to ambiance  
 Adds default .jshintrc to the home directory (from this repo)  
+Adds default .jscsrc to the home directory (from this repo)  
 Show 12h AM/PM clock at the top bar (including day abbreviation, date, seconds)  
 Add minimize and maximize back  
 Allows workspaces on multiple monitors  
