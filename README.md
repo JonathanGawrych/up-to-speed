@@ -37,13 +37,12 @@ tomcat7 - Servlet and JSP engine
 nginx - Reverse proxy server and web server
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
-n - Node version manager  
-yo - CLI tool for scaffolding out Yeoman projects  
 bower - The browser package manager  
 grunt - The JavaScript Task Runner  
-generator-angular - Yeoman generator for AngularJS  
 less - Css preprocessor  
+jscs - JavaScript Code Style Tool  
 jshint - JavaScript Code Quality Tool
+n - Node version manager  
 
 *(apm install (Atom Packages))*  
 atom-color-highlight - Highlights color in files  
