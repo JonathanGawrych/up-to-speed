@@ -97,7 +97,6 @@ if [ "$atom" == "Y" ]; then
 	sudo apt-get install -y atom
 	# install one at a time, so that if one failes, all the ones after it don't
 	apm install atom-color-highlight
-	apm install atom-jshint
 	apm install autocomplete-paths
 	apm install autocomplete-plus
 	apm install color-picker
@@ -105,6 +104,9 @@ if [ "$atom" == "Y" ]; then
 	apm install enhanced-package-list
 	apm install file-icons
 	apm install git-difftool
+	apm install linter
+	apm install linter-jscs
+	apm install linter-jshint
 	apm install minimap
 	apm install minimap-color-highlight
 	apm install minimap-find-and-replace
