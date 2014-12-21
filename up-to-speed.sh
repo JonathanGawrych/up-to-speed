@@ -1,10 +1,10 @@
 #!/bin/bash
 if (( EUID == 0 )); then
-    echo "You must NOT be root to run this." 1>&2
-    echo "Why? Preferences are changed for the current user." 1>&2
-    echo "If ran as root, those changes will not take place for you, but for root instead." 1>&2
-    echo "Also, many files will be owned by root rather than you, messing up permissions." 1>&2
-    exit 1
+	echo "You must NOT be root to run this." 1>&2
+	echo "Why? Preferences are changed for the current user." 1>&2
+	echo "If ran as root, those changes will not take place for you, but for root instead." 1>&2
+	echo "Also, many files will be owned by root rather than you, messing up permissions." 1>&2
+	exit 1
 fi
 
 # prevent root from creating ~/tmp/ by creating it ourself and cause permission problems
@@ -36,6 +36,15 @@ if [ -z "$nginx" ]; then
 	nginx="Y"
 fi
 nginx="${nginx^^}" #toUpperCase
+
+echo ""
+echo "Would you like to install docker? (Y/n) "
+read docker
+
+if [ -z "$docker" ]; then
+	docker="Y"
+fi
+docker="${docker^^}" #toUpperCase
 
 echo ""
 echo "Would you like to install sublime? (Y/n) "
@@ -129,6 +138,20 @@ if [ "$nginx" == "Y" ]; then
 	sudo apt-get install -y nginx
 fi
 
+if [ "$docker" == "Y" ]; then
+	sudo apt-get install -y apt-transport-https
+	# Add Official Docker Repository to install docker as opposed to using official Ubuntu package
+	sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+	sudo sh -c "echo deb https://get.docker.com/ubuntu docker main\
+	> /etc/apt/sources.list.d/docker.list"
+	sudo apt-get update
+	sudo apt-get install -y lxc-docker
+	# Configure Docker to be used without sudo
+	sudo groupadd docker
+	sudo gpasswd -a $USER docker
+	sudo service docker restart
+fi
+
 # We want to install nodejs by n. n is installed by npm. npm is installed by nodejs.
 # To resolve this cirular dependency, we use apt as the entryway, then run around in a circle
 sudo apt-get install -y nodejs              # install node/npm from apt
@@ -201,3 +224,7 @@ ssh-keygen -t rsa -b 2048 -C "$email" -N "" -f ~/.ssh/id_rsa
 cp ~/.bash-git-prompt/git-prompt-colors.sh ~/.git-prompt-colors.sh
 sed -i -e 's/\xe2\x97\x8f/\xe2\x80\xa2/' -e 's/\xe2\x9c\x96/\xe2\x98\xa2\x20/' -e 's/\xe2\x9c\x9a/\xc2\xb1/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x9a\x91/\xe2\xad\x91/' -e 's/\xe2\x86\x91\xc2\xb7/\xe2\x86\x91/' -e 's/\xe2\x86\x93\xc2\xb7/\xe2\x86\x93/' ~/.git-prompt-colors.sh
 printf '\n  GIT_PROMPT_START="$BoldBlue\w$ResetColor"\n  GIT_PROMPT_END=" $ "' >> ~/.git-prompt-colors.sh
+
+if [ "$docker" == "Y" ]; then
+	echo "Script Complete. Please log out and log back in to finish Docker configuration."
+fi

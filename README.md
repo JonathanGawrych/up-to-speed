@@ -34,7 +34,8 @@ meld - Graphical tool to diff and merge files
 curl - CLI tool for file downloading (needed for n)  
 nodejs - Event-based server-side javascript engine (temporarily installed with apt, permanently installed with n)  
 tomcat7 - Servlet and JSP engine  
-nginx - Reverse proxy server and web server
+nginx - Reverse proxy server and web server  
+lxc-docker - Official Docker daemon package (not from Ubuntu repository)
 
 *(npm install -g. Note node prefix changed. See configuration below)*  
 bower - The browser package manager  
@@ -76,6 +77,8 @@ Due to [running npm with root cause permission problems](http://stackoverflow.co
 Changes theme to ambiance  
 Adds default .jshintrc to the home directory (from this repo)  
 Adds default .jscsrc to the home directory (from this repo)  
+Instead of installing Docker from Ubuntu repository, add and install from official Docker repository, due to it being the latest version  
+Add current user to docker group to allow usage without using sudo  
 Show 12h AM/PM clock at the top bar (including day abbreviation, date, seconds)  
 Add minimize and maximize back  
 Allows workspaces on multiple monitors  
