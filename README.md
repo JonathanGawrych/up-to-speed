@@ -82,9 +82,9 @@ Add current user to docker group to allow usage without using sudo
 Show 12h AM/PM clock at the top bar (including day abbreviation, date, seconds)  
 Add minimize and maximize back  
 Allows workspaces on multiple monitors  
-Changes favorite apps to nautilus, chromium, firefox, sublime, terminal  
+Changes favorite apps to nautilus, chromium, firefox, your default editor, terminal  
 For gedit, only show tabs if there is more than one tab, show lines numbers, disable word wrap, change tab size to 4, and prevents backup copies (suffixed with "~" that can cause problems when editing system settings)  
-For git, sets meld as the diff/merge tool, sets sublime as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple, and set the tab length of git pager to 4  
+For git, sets meld as the diff/merge tool, sets your default editor as the core editor, shows color, changes user name/email, prevent creation of .orig files that muck everything up, sets push mode to simple, set the tab length of git pager to 4, do not pull if non-fastforward  
 For bash-git-prompt, change the unicode symbols and PS1 style  
 For Nautilus, disable recursive searching  
 Creates a ssh key  

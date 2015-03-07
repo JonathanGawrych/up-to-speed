@@ -211,6 +211,7 @@ git config --global push.default simple
 git config --global user.email "$email"
 git config --global user.name "$name"
 git config --global core.pager 'less -x5,9'
+git config --global pull.ff only
 
 if [ "$defaulteditor" == "A" ]; then
 	git config --global core.editor "atom -wn"
