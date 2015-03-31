@@ -17,7 +17,7 @@ ppa:webupd8team/atom
 
 **Installs:**  
 *(apt-get install)*  
-chromium-browser - Google Chrome without the extras (Flash, PDF, AAC, MP3, Print-Preview, Google's @trade; name/logo, Opt-in usage statistics and crash reports)  
+chromium-browser - Google Chrome without the extras (Flash, PDF, AAC, MP3, Print-Preview, Google's &trade; name/logo, Opt-in usage statistics and crash reports)  
 light-themes - Ambiance Theme (configured below)  
 dmz-cursor-theme - White Cursor (also configured below)  
 nautilus-open-terminal - Right click -> Open directory in terminal  
