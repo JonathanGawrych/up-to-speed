@@ -104,10 +104,8 @@ fi
 
 if [ "$atom" == "Y" ]; then
 	sudo apt-get install -y atom
-	# install one at a time, so that if one failes, all the ones after it don't
-	apm install atom-color-highlight
+	# install one at a time, so that if one fails, all the ones after it don't
 	apm install autocomplete-paths
-	apm install autocomplete-plus
 	apm install color-picker
 	apm install editorconfig
 	apm install enhanced-package-list
@@ -123,8 +121,6 @@ if [ "$atom" == "Y" ]; then
 	apm install minimap-highlight-selected
 	apm install minimap-selection
 	apm install monokai
-	apm install project-palette-finder
-	apm install sublime-tabs
 	apm install tabs-to-spaces
 	echo -e "\n'.workspace .editor:not(.mini)':\n  'ctrl-shift-L': 'editor:split-selections-into-lines'" >> ~/.atom/keymap.cson
 fi
