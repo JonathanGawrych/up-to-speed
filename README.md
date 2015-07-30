@@ -46,9 +46,7 @@ jshint - JavaScript Code Quality Tool
 n - Node version manager  
 
 *(apm install (Atom Packages))*  
-atom-color-highlight - Highlights color in files  
 autocomplete-paths - Adds path autocompletion to autocomplete+  
-autocomplete-plus - Display possible completions in the editor while typing  
 color-picker - A Color Picker for the Atom Editor. Right click a color and select color picker to open it  
 editorconfig - Helps developers maintain consistent coding styles between different editors  
 enhanced-package-list - Adds an icon to bundled packages and fades out disabled packages in the settings view  
@@ -64,8 +62,6 @@ minimap-git-diff - A minimap binding for the git diff package
 minimap-highlight-selected - A minimap binding for the highlight-selected package  
 minimap-selection - Display the buffer's selections on the minimap  
 monokai - A monokai syntax theme for Atom  
-project-palette-finder - Finds and archive colors defined in a project's less/sass/stylus files  
-sublime-tabs - Sublime-style tabs  
 tabs-to-spaces - Provides the ability to convert between leading tabs and spaces in a document
 
 *(other sources)*  
