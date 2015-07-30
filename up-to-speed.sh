@@ -126,7 +126,6 @@ if [ "$atom" == "Y" ]; then
 	apm install project-palette-finder
 	apm install sublime-tabs
 	apm install tabs-to-spaces
-  apm
 	echo -e "\n'.workspace .editor:not(.mini)':\n  'ctrl-shift-L': 'editor:split-selections-into-lines'" >> ~/.atom/keymap.cson
 fi
 
